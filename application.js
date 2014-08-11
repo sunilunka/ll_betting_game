@@ -41,8 +41,14 @@
     if (guessNumber === number) {
       userFunds += (userBet*2);
     } else if ((guessNumber < (number - 1 )) || (guessNumber > (number + 1 ))) {
-      userFunds -= userBet;
+      if ( userFunds > 0 ) {
+        userFunds -= userBet;
+      } else {
+        userFunds = 0;
+      };
     };
+
+    displayUserFunds();
 
     console.log(userFunds);
 
@@ -56,14 +62,13 @@
   $submit.on("click", function(event){
     event.preventDefault();
     workOutBet(generateNumber(), getGuess(), getBet());
-    displayUserFunds();
 
   });
 
 // Display Logic
 
 var displayUserFunds = function(){
-  $("#funds").html(userFunds);
+  $("#funds").find("span").html(userFunds);
 };
 
   $(document).ready(function(){

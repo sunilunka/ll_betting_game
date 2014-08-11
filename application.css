@@ -1,0 +1,44 @@
+body {
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat; }
+
+#gameContainer {
+  position: relative;
+  height: auto;
+  width: 50%;
+  margin: 100px auto;
+  border-radius: 20px;
+  font-family: helvetica, arial;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  text-align: center; }
+  #gameContainer h1 {
+    position: relative;
+    width: auto;
+    margin: 0 auto; }
+  #gameContainer #funds {
+    width: 50%;
+    background-color: rgba(14, 161, 17, 0.75);
+    margin: 50px auto;
+    padding: 10px;
+    border-radius: 10px; }
+  #gameContainer input {
+    margin: 20px;
+    padding: 0px;
+    font-size: 1.2em;
+    padding: 5px; }
+  #gameContainer #submit {
+    margin: 20px auto;
+    padding: 10px;
+    height: auto;
+    width: auto;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 78, 98, 0.75);
+    font-size: 1.5em; }
+  #gameContainer #submit:active {
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.95) inset; }

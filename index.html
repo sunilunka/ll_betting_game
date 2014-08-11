@@ -3,20 +3,27 @@
   <head>
     <meta charset="UTF-8"/>
     <title>Betting Game</title>
+    <link type="text/css" rel="stylesheet" href="application.css"/>
   </head>
   <body>
-    <h1>Betting Game</h1>
+    <div id="gameContainer">
+      <h1>Cash Money!</h1>
 
-    <div id="funds">
+      <div id="funds">
+        <h3>You've got...</h3>
+        <p>$<span><span></p>
+        <h3>left to bet!</h3>
+      </div>
+
+      <form>
+        <label>Your guess:</label><br>
+        <input id="numberguess" type="number" name="numberguess"/><br>
+        <label>Your bet: </label><br>
+        <input id="bet" type="number" name="bet"/><br>
+        <input id="submit" type="submit" value="Place your bet!"/>
+      </form>
     </div>
 
-    <form>
-      <label>Your guess:</label>
-      <input id="numberguess" type="number" name="numberguess"/>
-      <label>Your bet: </label>
-      <input id="bet" type="number" name="bet"/>
-      <input id="submit" type="submit" value="Place your bet!"/>
-    </form>
     <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="application.js"></script>
   </body>
