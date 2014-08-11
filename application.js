@@ -1,13 +1,15 @@
 
 ;(function( $, window, document){
 
+
+// Generating number to guess
   var generateNumber = function(){
     numberToGuess = (Math.round(Math.random() * 10))
     console.log(numberToGuess);
   };
 
-  generateNumber();
 
+  //getting data
   var getGuess = function(){
     guessField = document.getElementById("numberguess")
     guessValue = guessField.value;
@@ -22,12 +24,25 @@
     return betAmount;
   };
 
+
+// Game logic
+
+// User starts with $100
+
+  var userFunds = 100;
+
+  var workOutBet = function(number, guess, bet){
+    console.log(number, guess, bet);
+  };  
+
+
+// Events logic
   var $submit = $("#submit");
 
   $submit.on("click", function(event){
     event.preventDefault();
-    getGuess();
-    getBet();
+    workOutBet(generateNumber(), getGuess(), getBet());
+
   });
 
   
