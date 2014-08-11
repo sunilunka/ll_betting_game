@@ -6,6 +6,15 @@
     console.log(numberToGuess);
   };
 
+  generateNumber();
+
+  var getGuess = function(){
+    guessField = document.getElementById("numberguess")
+    guessValue = guessField.value;
+    console.log(guessValue);
+    return guessValue;
+  };
+
   var getBet = function(){
     betField = document.getElementById("bet");
     betAmount = betField.value;
@@ -17,9 +26,10 @@
 
   $submit.on("click", function(event){
     event.preventDefault();
+    getGuess();
     getBet();
   });
 
-  generateNumber();
+  
 
 }( jQuery, window, document));
