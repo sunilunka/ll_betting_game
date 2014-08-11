@@ -14,14 +14,17 @@
         <p>$<span><span></p>
         <h3>left to bet!</h3>
       </div>
-
+      <div id="warning"></div>
       <form>
         <label>Your guess:</label><br>
-        <input id="numberguess" type="number" name="numberguess"/><br>
+        <input id="numberguess" type="text" name="numberguess"/>
+        <br>
         <label>Your bet: </label><br>
-        <input id="bet" type="number" name="bet"/><br>
-        <input id="submit" type="submit" value="Place your bet!"/>
+        <input id="bet" type="text" name="bet"/>
+        <span id="betwarning"><div class="talkbubble"><p>You can only bet between $5 and $10.</p></div></span><br>
+        <input id="submit" class="buttonShadow" type="submit" value="Place your bet!"/>
       </form>
+      <button id="playagain" class="buttonShadow">Play Again</button>
     </div>
 
     <script type="text/javascript" src="jquery-2.1.1.min.js"></script>

@@ -30,12 +30,30 @@ body {
     padding: 10px;
     border-radius: 10px;
   }
-    
+
+  #warning {
+    position: relative;
+    margin: 20px auto;
+    display: none;
+    height: auto;
+    width: 50%;
+    background-color:red;
+    border-radius: 10px;
+    padding: 20px;
+
+  }
+  
+  label {
+    font-size: 1.4em;
+  }
+
   input {
     margin: 20px;
     padding: 0px;
     font-size: 1.2em;
     padding: 5px;
+    background-color: rgba(255,255,255, 0.75);
+    border: none;
   }
   #submit {
     margin: 20px auto;
@@ -48,10 +66,52 @@ body {
     font-size: 1.5em;
   }
 
-  #submit:active {
+  .buttonShadow:active {
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.95) inset;
   }
 
+  #betwarning {
+    position: absolute;
+    height: auto;
+    width: auto;
+    z-index: 100; 
+    display: none;     
+  }
+
+  .talkbubble {
+   width: 120px;
+   height: 80px;
+   background: red;
+   position: absolute;
+   -moz-border-radius:    10px;
+   -webkit-border-radius: 10px;
+   border-radius:         10px;
+    p {
+      margin: 0;
+      padding: 10px;
+    }
+  }
+
+
+  .talkbubble:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: 26px;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-right: 26px solid red;
+   border-bottom: 13px solid transparent;
+  }
+
+  #playagain {
+    background-color: rgba(255,255,255,0.85);
+    border: none;
+    padding: 20px;
+    font-size: 1.4em;
+
+  }
 
 }
 

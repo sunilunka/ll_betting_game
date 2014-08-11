@@ -26,11 +26,24 @@ body {
     margin: 50px auto;
     padding: 10px;
     border-radius: 10px; }
+  #gameContainer #warning {
+    position: relative;
+    margin: 20px auto;
+    display: none;
+    height: auto;
+    width: 50%;
+    background-color: red;
+    border-radius: 10px;
+    padding: 20px; }
+  #gameContainer label {
+    font-size: 1.4em; }
   #gameContainer input {
     margin: 20px;
     padding: 0px;
     font-size: 1.2em;
-    padding: 5px; }
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: none; }
   #gameContainer #submit {
     margin: 20px auto;
     padding: 10px;
@@ -40,5 +53,37 @@ body {
     color: rgba(255, 255, 255, 0.75);
     background-color: rgba(255, 78, 98, 0.75);
     font-size: 1.5em; }
-  #gameContainer #submit:active {
+  #gameContainer .buttonShadow:active {
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.95) inset; }
+  #gameContainer #betwarning {
+    position: absolute;
+    height: auto;
+    width: auto;
+    z-index: 100;
+    display: none; }
+  #gameContainer .talkbubble {
+    width: 120px;
+    height: 80px;
+    background: red;
+    position: absolute;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; }
+    #gameContainer .talkbubble p {
+      margin: 0;
+      padding: 10px; }
+  #gameContainer .talkbubble:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 26px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 26px solid red;
+    border-bottom: 13px solid transparent; }
+  #gameContainer #playagain {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: none;
+    padding: 20px;
+    font-size: 1.4em; }
