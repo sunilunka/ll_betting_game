@@ -56,7 +56,18 @@
   $submit.on("click", function(event){
     event.preventDefault();
     workOutBet(generateNumber(), getGuess(), getBet());
+    displayUserFunds();
 
+  });
+
+// Display Logic
+
+var displayUserFunds = function(){
+  $("#funds").html(userFunds);
+};
+
+  $(document).ready(function(){
+    displayUserFunds();  
   });
 
   
