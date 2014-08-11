@@ -6,6 +6,7 @@
   var generateNumber = function(){
     numberToGuess = (Math.round(Math.random() * 10))
     console.log(numberToGuess);
+    return numberToGuess;
   };
 
 
@@ -31,8 +32,21 @@
 
   var userFunds = 100;
 
+
   var workOutBet = function(number, guess, bet){
     console.log(number, guess, bet);
+    var guessNumber = parseInt(guess),
+        userBet = parseInt(bet);
+
+    if (guessNumber === number) {
+      userFunds += (userBet*2);
+    } else if ((guessNumber < (number - 1 )) || (guessNumber > (number + 1 ))) {
+      userFunds -= userBet;
+    };
+
+    console.log(userFunds);
+
+
   };  
 
 
